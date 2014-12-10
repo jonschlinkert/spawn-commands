@@ -1,0 +1,49 @@
+{
+  "name": "spawn-commands",
+  "description": "Launches a new process with the given command, with command line arguments in `args`. Should work with any platform - even Windows.",
+  "version": "0.1.0",
+  "homepage": "https://github.com/jonschlinkert/spawn-commands",
+  "author": {
+    "name": "Jon Schlinkert",
+    "url": "https://github.com/jonschlinkert"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jonschlinkert/spawn-commands.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jonschlinkert/spawn-commands/issues"
+  },
+  "license": {
+    "type": "MIT",
+    "url": "https://github.com/jonschlinkert/spawn-commands/blob/master/LICENSE-MIT"
+  },
+  "main": "index.js",
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "mocha -R spec"
+  },
+  "devDependencies": {
+    "mocha": "*",
+    "should": "*"
+  },
+  "keywords": [
+    "arg",
+    "args",
+    "arguments",
+    "child_process",
+    "cmd",
+    "command",
+    "commands",
+    "platform",
+    "process",
+    "spawn",
+    "win",
+    "windwows"
+  ],
+  "dependencies": {
+    "async": "^0.9.0"
+  }
+}
