@@ -7,9 +7,15 @@
 
 'use strict';
 
-var spawn = require('./index');
+var run = require('./index');
 
-spawn([
-  {cmd: 'deps', args: ['-e', 'node_modules']},
-  {cmd: 'echo "hello world"'}
-]);
+// run({cmd: 'npm --version'});
+// run({cmd: 'npm', args: ['--version']});
+// run([
+//   {cmd: 'npm', args: ['install', '--save', 'is-glob']},
+//   {cmd: 'npm', args: ['uninstall', '--save', 'is-glob']},
+//   {cmd: 'npm install --production -d'}
+// ]);
+run({cmd: 'npm install', args: ['--save-dev', 'mocha', 'should']});
+// run({cmd: 'npm uninstall --save-dev', args: ['mocha', 'should']});
+// run({cmd: 'npm install -d'});
