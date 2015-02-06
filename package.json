@@ -1,6 +1,6 @@
 {
   "name": "spawn-commands",
-  "description": "Launches a new process with the given command, with command line arguments in `args`. Should work with any platform - even Windows.",
+  "description": "Launches a new process with the given command, with command line arguments in `args`. Should work with any platform - even Windows - because of using [cross-spawn][cross-spawn] under the hood.",
   "version": "0.1.0",
   "homepage": "https://github.com/jonschlinkert/spawn-commands",
   "author": {
