@@ -32,6 +32,14 @@ cmd({cmd: 'npm', args: ['i', 'foo', 'bar', '--save']});
 //=> 'npm i foo bar --save'
 ```
 
+Optional callback:
+
+```js
+cmd({cmd: 'npm', args: ['i', 'foo', 'bar', '--save']}, function(err) {
+  // do stuff
+});
+```
+
 ## Contributing
 Pull requests and stars are always welcome. For bugs and feature requests, [please create an issue](https://github.com/jonschlinkert/spawn-commands/issues)
 
