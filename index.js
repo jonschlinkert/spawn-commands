@@ -1,8 +1,8 @@
 /*!
  * spawn-commands <https://github.com/jonschlinkert/spawn-commands>
  *
- * Copyright (c) 2014 Jon Schlinkert, contributors.
- * Licensed under the MIT license.
+ * Copyright (c) 2014-2015, Jon Schlinkert.
+ * Licensed under the MIT License.
  */
 
 'use strict';
@@ -11,7 +11,7 @@ var async = require('async');
 var spawn = require('child_process').spawn;
 var win32 = process.platform === 'win32';
 
-module.exports = function spawnCommand(cmds) {
+module.exports = function spawnCommand(cmds, cb) {
   cmds = !Array.isArray(cmds)
     ? [cmds]
     : cmds;
@@ -28,5 +28,5 @@ module.exports = function spawnCommand(cmds) {
     spawn(command, args, {stdio: 'inherit'})
       .on('error', next)
       .on('close', next);
-  });
+  }, cb);
 };
