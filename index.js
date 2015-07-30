@@ -12,14 +12,10 @@ var spawn = require('child_process').spawn;
 var win32 = process.platform === 'win32';
 
 module.exports = function spawnCommand(cmds, cb) {
-  cmds = !Array.isArray(cmds)
-    ? [cmds]
-    : cmds;
+  cmds = Array.isArray(cmds) ? cmds : [cmds];
 
   async.eachSeries(cmds, function (cmd, next) {
-    var command = win32
-      ? 'cmd'
-      : cmd.cmd;
+    var command = win32 ? 'cmd' : cmd.cmd;
 
     var args = win32
       ? ['/c'].concat([cmd.cmd + ' ' + cmd.args.join(' ')])
