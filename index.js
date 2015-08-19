@@ -7,14 +7,13 @@
 
 'use strict';
 
-var async = require('async');
 var spawn = require('child_process').spawn;
 var win32 = process.platform === 'win32';
 
 module.exports = function spawnCommand(cmds, cb) {
   cmds = Array.isArray(cmds) ? cmds : [cmds];
 
-  async.eachSeries(cmds, function (cmd, next) {
+  eachSeries(cmds, function (cmd, next) {
     var command = win32 ? 'cmd' : cmd.cmd;
 
     var args = win32
@@ -26,3 +25,17 @@ module.exports = function spawnCommand(cmds, cb) {
       .on('close', next);
   }, cb);
 };
+
+function eachSeries(arr, iter, cb) {
+  cb = cb || function noop() {};
+  (function next(i) {
+    if (i === arr.length) return cb();
+    iter(arr[i], i, function(err) {
+      if (err) return cb(err);
+      setImmediate(function () {
+        return next(i + 1);
+      });
+    });
+  })(0);
+}
+
