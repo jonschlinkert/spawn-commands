@@ -1,7 +1,7 @@
 {
   "name": "spawn-commands",
   "description": "Launches a new process with the given command, with command line arguments in `args`. Should work with any platform - even Windows.",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "homepage": "https://github.com/jonschlinkert/spawn-commands",
   "author": "Jon Schlinkert (https://github.com/jonschlinkert)",
   "repository": "jonschlinkert/spawn-commands",
@@ -41,5 +41,8 @@
         "minimist-plugins"
       ]
     }
+  },
+  "dependencies": {
+    "async-each-series": "^1.0.0"
   }
 }
