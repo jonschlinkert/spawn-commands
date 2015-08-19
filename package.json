@@ -1,23 +1,14 @@
 {
   "name": "spawn-commands",
   "description": "Launches a new process with the given command, with command line arguments in `args`. Should work with any platform - even Windows.",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "homepage": "https://github.com/jonschlinkert/spawn-commands",
-  "author": {
-    "name": "Jon Schlinkert",
-    "url": "https://github.com/jonschlinkert"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/jonschlinkert/spawn-commands.git"
-  },
+  "author": "Jon Schlinkert (https://github.com/jonschlinkert)",
+  "repository": "jonschlinkert/spawn-commands",
   "bugs": {
     "url": "https://github.com/jonschlinkert/spawn-commands/issues"
   },
-  "license": {
-    "type": "MIT",
-    "url": "https://github.com/jonschlinkert/spawn-commands/blob/master/LICENSE"
-  },
+  "license": "MIT",
   "files": [
     "index.js"
   ],
@@ -27,12 +18,6 @@
   },
   "scripts": {
     "test": "mocha"
-  },
-  "dependencies": {
-    "async": "^0.9.0"
-  },
-  "devDependencies": {
-    "mocha": "*"
   },
   "keywords": [
     "arg",
@@ -47,5 +32,14 @@
     "spawn",
     "win",
     "windwows"
-  ]
+  ],
+  "verb": {
+    "related": {
+      "list": [
+        "lint-deps",
+        "minimist-events",
+        "minimist-plugins"
+      ]
+    }
+  }
 }
