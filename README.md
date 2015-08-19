@@ -24,22 +24,25 @@ $ npm i -d && npm test
 var cmd = require('spawn-commands');
 ```
 
-**Examples**
+### Examples
 
 Install npm modules:
 
+**async**
+
 ```js
-cmd({cmd: 'npm', args: ['i', 'foo', 'bar', '--save']});
-// runs the command:
-//=> 'npm i foo bar --save'
+commands({cmd: 'npm', args: ['i', 'isobject', '--save']}, function(err) {
+  // runs the command:
+  //=> 'npm i isobject --save'
+});
 ```
 
-Optional callback:
+**sync**
 
 ```js
-cmd({cmd: 'npm', args: ['i', 'foo', 'bar', '--save']}, function(err) {
-  // do stuff
-});
+cmd.sync({cmd: 'npm', args: ['i', 'isobject', '--save']});
+// runs the command:
+//=> 'npm i isobject --save'
 ```
 
 ## Other useful CLI projects
